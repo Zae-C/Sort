@@ -1,0 +1,30 @@
+import pygame
+import random
+pygame.init()
+
+#creates game screen and caption
+screen = pygame.display.set_mode((800, 800))
+pygame.display.set_caption("Silly Shapes")
+
+b = 0
+numbers = []
+
+for x in range(20+1):
+    a = random.randrange(800)
+    pygame.draw.rect(screen, (255, 255, 255), (b, (800-a), 40, a))
+    b+=40
+    numbers.append(a)
+    print(a)
+    
+print(numbers)
+
+numbers.sort()
+
+print(numbers)
+
+while True:
+    
+    pygame.display.flip() #update graphics 
+    
+
+pygame.quit()
